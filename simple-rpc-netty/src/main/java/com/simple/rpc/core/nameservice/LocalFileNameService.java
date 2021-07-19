@@ -1,4 +1,4 @@
-package com.simple.rpc.netty.nameservice;
+package com.simple.rpc.core.nameservice;
 
 import com.simple.rpc.api.NameService;
 

@@ -1,4 +1,4 @@
-package com.simple.rpc.netty;
+package com.simple.rpc.core;
 
 /**
  * @author wansong

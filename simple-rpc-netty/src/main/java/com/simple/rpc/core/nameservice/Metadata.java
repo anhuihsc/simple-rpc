@@ -1,4 +1,4 @@
-package com.simple.rpc.netty.nameservice;
+package com.simple.rpc.core.nameservice;
 
 import java.net.URI;
 import java.util.HashMap;
