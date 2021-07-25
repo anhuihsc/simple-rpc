@@ -1,7 +1,10 @@
 package com.simple.rpc.api;
 
+import com.simple.rpc.api.spi.ServiceSupport;
+
 import java.io.Closeable;
 import java.net.URI;
+import java.util.Collection;
 
 /**
  * @author wansong
@@ -34,5 +37,16 @@ public interface RpcAccessPoint extends Closeable {
      * @return 服务实例，用于程序停止的时候安全关闭服务。
      */
     Closeable startServer() throws Exception;
+
+    default NameService getNameService(URI nameServiceUri) {
+        Collection<NameService> nameServices = ServiceSupport.loadAll(NameService.class);
+        for (NameService nameService : nameServices) {
+            if(nameService.supportedSchemes().contains(nameServiceUri.getScheme())) {
+                nameService.connect(nameServiceUri);
+                return nameService;
+            }
+        }
+        return null;
+    }
 
 }

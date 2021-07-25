@@ -7,6 +7,23 @@
     <groupId>simple-rpc</groupId>
     <artifactId>simple-rpc-server</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>simple-rpc</groupId>
+            <artifactId>hello-service-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>simple-rpc</groupId>
+            <artifactId>simple-rpc-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>simple-rpc</groupId>
+            <artifactId>simple-rpc-netty</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

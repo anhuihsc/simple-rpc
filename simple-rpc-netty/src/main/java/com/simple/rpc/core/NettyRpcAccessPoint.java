@@ -43,7 +43,7 @@ public class NettyRpcAccessPoint implements RpcAccessPoint {
     @Override
     public <T> URI addServiceProvider(T service, Class<T> serviceClass) {
         serviceProviderRegistry.addServiceProvider(serviceClass, service);
-        return null;
+        return uri;
     }
 
     @Override
